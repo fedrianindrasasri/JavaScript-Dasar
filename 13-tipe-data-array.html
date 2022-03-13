@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+
+<body>
+    <script>
+        let arrayKosong = [];
+        let arrayNama = ["Fedrian", "Indra", "Sasri"];
+
+
+        const names = [];
+        names.push("Fedrian");
+        names.push("Indra", "Sasri");
+
+        console.table(names);
+
+        console.info(names[0]);
+        names[0] = "Programmer";
+        console.table(names);
+
+        delete names[2];
+        console.table(names);
+
+        names.push("aaa");
+        console.table(names);
+
+        names[2] = "Ada lagi"
+        console.table(names);
+    </script>
+</body>
+
+</html>
+<!-- 
+
+adalah tipe data yang berisikan kumpulan data
+array di JS memiliki sifat dinamis, artinya data bisa bertambah sendirinya saat kita memasukkan data ke dalam array
+
+cara kerja array
+    setiap data di array akan disimpan dalam posisi berurutan, dimana urutan pertama dimulai dari nomor 0
+    saat kita menambah data arrray , otomatis data akan disimpan di urutan terakhir
+    urutan di array kita sebut dengan index
+
+Perlu diingat
+    data dalam array tidak ada batasnya harus data apa
+    jadi kita bisa memasukkan data apapun kedalam array
+    bahkan kita juga bisa memasukkan array ke dalam array
+
+
+-->

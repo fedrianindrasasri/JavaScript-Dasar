@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>String Template</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- 
     untuk menggunakan string template cara pembuatan Stringnya harus menggunakan `(backtick) bukan petik satu atau petik dua
     bisa juga menggunakan expression di string template
+    
+    bisa juga menjadi string multiline
+
     -->
 
-
     <script>
-        const name = "Fedrian Indra Sasri";
-        const value = 80
-        const template = `Nama : ${name}, Lulus : ${value > 75}`;  // String template
+      const name = 'Fedrian Indra Sasri';
+      const value = 80;
+      const template = `Nama : ${name}, Lulus : ${value > 75}`; // String template
 
-        console.info(template);
+      console.info(template);
+
+      let multilineString = `
+        Fedrian
+        Indra 
+        Sasri
+        Programmer
+        `;
+
+      document.writeln('<pre>');
+      document.writeln(multilineString);
+      document.writeln('</pre>');
     </script>
-</body>
-
+  </body>
 </html>
+
