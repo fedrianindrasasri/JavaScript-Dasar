@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Typeof</title>
+</head>
+
+<body>
+    <!--
+        merupakan operator yang bisa kita gunakan untuk melihat tipe data sebuah value atau varibale
+        karena JS merupakan dynamic language, jadi kadang kita perlu mengecek tipe data sebuah value atau variable menggunakan operator type of
+        hasi dari operator typeof adalah string tipe datanya
+    -->
+
+    <script>
+        let data;
+        if (typeof data === "number") {
+            document.writeln("Number");
+        } else if (typeof data === "string") {
+            document.writeln("string");
+        } else if (typeof data === "boolean") {
+            document.writeln("boolean");
+        } else if (typeof data === "object") {
+            document.writeln("object");
+        } else if (typeof data === "undefined") {
+            document.writeln("undefined");
+        }
+    </script>
+</body>
+
+</html>

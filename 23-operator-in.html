@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+
+<body>
+    <!--
+        adalah operator yang bisa dilakukan untuk mengecek apakah sebuah property ada di dalam object atau tidak
+        jika property tersebut ada di object, maka hasilnya true, sedankan jika tidak maka hasilnya false
+        tidak hanya di object, in juga bisa digunakan untuk mengecek index di array
+
+        #peringatan
+        in operator hanya akan mengecek apakah sebuah property atay index ada atau tidak
+        jadi walaupun nilai property atay index nya undefinde atau null, maka tetap akan dianggap ada
+    -->
+    <script>
+        const person = {
+            firstname: "Fedrian",
+            lastname: "Sasri"
+        }
+
+        const result = "firstname" in person;
+        document.writeln(result);
+    </script>
+</body>
+
+</html>

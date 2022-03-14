@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do WHile Loop</title>
+</head>
+
+<body>
+    <!-- 
+        adalah perulangan yang mirip dengan while
+        perbedaanya hanya pada kondisi pengecekan kondisi
+        jika di while loop dilakukan di awal perulangan,
+        sedangkan do while melakukan perulangan terlebih dahulu baru pengecekan kondisi
+        oleh karena itu, di do while pasti perulangan dilakukan walaupun tidak bernilai true
+    -->
+
+    <script>
+        let counter = 1;
+        do {
+            document.writeln(`<p>Perulangan ke - ${counter}</p>`);
+            counter++;
+        } while (counter <= 10);
+    </script>
+</body>
+
+</html>
