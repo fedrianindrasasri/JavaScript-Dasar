@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return Value</title>
+</head>
+
+<body>
+
+    <!-- 
+        function sebenarnya tidak mengembalikan return value
+        tapi kita bisa membuatnya mengembalikan value dengan kata kunci return
+        cara nya adalah dengan menggunakan kata kunci return lalu diikuti dengan data yang ingin dihasilkan
+        function hanya bisa mengembalikan satu data saja, jika ingin beberapa data kita bisa menggunakan array untuk return valuenya
+    
+        saat kita menggunakan kata kunci return, maka kode setelah kata kunci return tidak akan dieksekusi lagi
+        kita bisa menggunakan return untuk menghentikan eksekusi function
+    -->
+
+    <script>
+
+        // membuat function dengan return value
+        function sayHello(firstName, lastName) {
+            const say = `<p>Hello ${firstName} ${lastName}</p>`;
+            return say;
+        }
+
+        // cara memanggil function nya
+        const result = sayHello("Fedrian", "Indra");
+        document.writeln(`${result}`);
+
+
+        function getFinalScore(value) {
+            if (value > 90) {
+                return "A";
+            } else if (value > 80) {
+                return "B";
+            }
+            else if (value > 70) {
+                return "C";
+            }
+            else if (value > 60) {
+                return "D";
+            }
+            else {
+                return "E";
+            }
+        }
+
+        const value = getFinalScore(85);
+        document.writeln(`<p>Nilai Anda Adalah : ${value}</p>`);
+
+
+        // menggunakan return untuk menghentikan blok kode selanjutnya
+        function isContains(array, searchValue) {
+            for (const element of array) {
+                if (element === searchValue) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const search = 1;
+        const found = isContains(array, search);
+        document.writeln(`<p>${found}</p>`);
+    </script>
+
+</body>
+
+</html>
