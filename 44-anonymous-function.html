@@ -24,6 +24,17 @@
         }
 
         say("Fedrian");
+
+        // anonymous function di parameter
+        function giveMeName(callback) {
+            callback("Fedrian");
+        }
+
+
+        
+        giveMeName(function (name) {
+            console.info(`Hi, ${name}`);
+        });
     </script>
 </body>
 

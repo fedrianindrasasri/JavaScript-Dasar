@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function didalam Function</title>
+</head>
+
+<body>
+
+    <!--
+        tidak ada batasan dimana kita bisa membuat function
+        function yang terdapat didalam function disebut inner function
+        inner function hanya bisa kita akses ditempat kita membuat function nya, tidak bisa diakses dari luar functionnya
+    -->
+
+    <script>
+        function outer() {
+            function inner() {
+                console.info("Inner");
+            }
+
+            inner();
+        }
+
+        outer();
+    </script>
+
+</body>
+
+</html>

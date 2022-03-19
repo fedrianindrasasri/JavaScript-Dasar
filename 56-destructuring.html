@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <!--
+    adalah fitur yang bisa digunakan untuk membongkar value-value di array atau object kedalam variable-variable
+    fitur ini sangat mempermudah kita ketika ingin mengambil dta dari array atau object tanpa harus melakukan pengambilan data satu  persatu
+
+    destructuring tidak hanya bisa dilakuakn di variable, tapi juga bisa diakukan di function parameter
+    hal ini membuat kita mudah ketika ingin mengambil nested data dalam array atau object dalam function
+
+    kita juga bisa menambahkan default value di destructuring
+  -->
+
+    <script>
+      // cara membuat destructuring di array
+      const names = ['Fedrian', 'Indra'];
+      const [firstName1, middleName1, lastName1 = 'Sasri'] = names;
+
+      console.info(firstName1);
+      console.info(middleName1);
+      console.info(lastName1);
+
+      // Membuat destructuring untuk object
+      const person = {
+        firstName: 'Fedrian',
+        lastName: 'Indra',
+        address: {
+          street: 'Jalan belum ada',
+          city: 'Pekanbaru',
+          country: 'Indonesia',
+        },
+        hobby: 'Berenang',
+        channel: 'Fedrian Indra Sasri',
+      };
+
+      const { firstName, lastName, address, ...others } = person;
+      console.info(firstName);
+      console.info(lastName);
+      console.info(address);
+    </script>
+  </body>
+</html>

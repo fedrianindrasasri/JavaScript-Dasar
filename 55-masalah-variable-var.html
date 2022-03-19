@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masalah Variable var</title>
+  </head>
+  <body>
+    <!--
+  
+    alasan var tidak direkomendasikan lagi karena var tidak memiliki block scope, artinya dia tidak mengikat ke local scope yang sebelumnya sudah kita bahas
+    karena masalah ini, var tidak bisa terprediksi
+    
+  
+  -->
+
+    <script>
+      //contoh dengan let
+      let i = 20;
+      for (let i = 0; i < 10; i++) {
+        console.info(`local - ${i}`);
+      }
+
+      console.info(`Global - ${i}`);
+
+      //contoh dengan var
+      var j = 20;
+      for (var j = 0; j < 10; j++) {
+        console.info(`Local - ${j}`);
+      }
+
+      console.info(j);
+    </script>
+  </body>
+</html>

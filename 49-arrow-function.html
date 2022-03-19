@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <!--
+        adalah alternatif pembuatan function yang lebih sederhana dari funciton biasanya
+        namun terdapat limitasi dan juga tidak bisa digunakan di semua dituasi
+        dinamakan arrow function karena menggunaknan => seperti panan
+        kekurangan arrow function:
+            tidak memiliki fitur arguments object
+            tidak bisa menggunakan function generator
+            tidak bisa mengakses this
+            tidak bisa mengakses super
+
+        jika hanya satu baris kita bisa menggunakan tanpa blok {}
+
+        arrow function bisa mengembalikan value, sama seperti function biasanya
+        jika menggunakan block, maka kita perlu menggunakan kata kunci return
+        jika tidak menggunakan block, kita tidak perlu menggunakan kata kunci return
+
+        jika tidak ada parameter maka tambahkan () saja.
+
+        karena arrow functin mirip seperti anonymous function
+        kita juga bisa menggunakan arrow function di parameter function lain
+    -->
+
+    <script>
+        const sayHello = (name) => {
+            const say = `Hello ${name}`;
+            console.info(say);
+        };
+
+        sayHello("Fedrian");
+
+
+        const sayHello2 = (name) => console.info(`Hello ${name}`);
+        sayHello2("Fedrian");
+
+        // return value satu baris
+        const sum = (first, second) => first + second;
+        console.info(sum(1, 1));
+
+        // jika menggunakan return
+        const sum2 = (first, second) => {
+            return first + second
+        };
+        console.info(sum(3, 1));
+
+        // tanpa menggunakan kurung pada parameter
+        const sayHello3 = name => console.info(`Hello ${name}`);
+        sayHello2("Fedrian");
+
+        // arrow function sebagai parameter
+        function giveMeName(callback) {
+            callback("Fedrian");
+        }
+
+
+        giveMeName((name) => console.info(`Hello ${name}`));
+
+    </script>
+</body>
+
+</html>
